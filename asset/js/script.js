@@ -32,5 +32,42 @@ console.log(containers);
 /*
 Un arreglo con todos los elemntos donde se encuentra la clase c2
 */
+var contenedores = document.querySelectorAll(".c2");
+console.log(contenedores);
+contenedores.forEach((element) => {
+    element.style.backgroundColor = "#009999";
+    element.innerHTML = '<input type="text" placeholder="escriba su texto">';
+});
 
-containers.style.backgroundColor = "#009999";
+/*
+Los demás cuadros cambiaron a un color turquesa 
+*/
+
+/*
+Cada cuadro tiene su propio input de tipo text
+*/
+
+/*
+La diferencia, es que con el innerHtml agregas u obtenes codigo en formato html
+y con innetText es en formato de texto
+*/
+
+var boton = document.getElementById("btn-click");
+
+boton.onclick = function(evt) {
+    alert("Hola mundo");
+}
+
+var btnCopy = document.getElementById("btnCopy");
+
+btnCopy.onclick = function(evt) {
+    let msj = document.getElementById('textMsj').value;
+    document.getElementById('showMsj').innerText = msj;
+}
+
+/* 
+Aparecerá un mensaje de alerta diciendo "Hola Mundo"
+*/
+
+/*Con innerText hay que agregar un texto específico y con value 
+el texto es el que se recoge atraves de un evento, es decir, el que se ingresa*/
